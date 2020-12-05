@@ -6,3 +6,12 @@ __pycache__
 **/__pycache__
 build
 dist
+/bitshares
+/bitsharesapi
+/bitsharesbase
+/grapheneapi
+/graphenebase
+/graphenestorage
+/pytimeparse
+/uidef
+/websocket

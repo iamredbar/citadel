@@ -2,7 +2,7 @@ import time
 from PyQt5 import QtCore, QtGui
 from PyQt5.QtCore import Qt
 
-from .work import async
+from .work import asyncc
 import logging
 log = logging.getLogger(__name__)
 
@@ -91,7 +91,7 @@ class RemoteFetch(QtCore.QObject):
 		#print("WITH ARGS", args, len(args))
 		#print("READY CB:", ready_callback)
 		#print("ERROR CB:", error_callback)
-		self.request = async(method, args, self.uid,
+		self.request = asyncc(method, args, self.uid,
 				self.ready_callback,
 				self.error_callback,
 				self.ping_callback,

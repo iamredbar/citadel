@@ -6,7 +6,7 @@ from PyQt5.QtCore import Qt
 import logging
 log = logging.getLogger(__name__)
 
-def async(method, args, uid, readycb, errorcb=None, pingcb=None, description="", manager=None):
+def asyncc(method, args, uid, readycb, errorcb=None, pingcb=None, description="", manager=None):
     """
     Asynchronously runs a task
 
@@ -290,7 +290,7 @@ class ExampleObject(QtCore.QObject):
             self.request = None
 
         self.uid += 1
-        self.request = async(slow_method, ["arg1", "arg2"], self.uid,
+        self.request = asyncc(slow_method, ["arg1", "arg2"], self.uid,
                              self.ready_callback,
                              self.error_callback,
                              self.ping_callback,
